@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - MedCode | Medical Billing</title>
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-file-medical text-primary-custom"></i>
+        <span>MedCode</span>
+      </a>
+
+      <div class="d-flex align-items-center gap-3 ms-auto">
+        <button id="theme-toggle" class="btn btn-link nav-link px-0" aria-label="Toggle theme">
+          <i id="theme-icon" class="bi bi-moon-fill fs-5"></i>
+        </button>
+        <a href="signup.html" class="btn btn-outline-custom d-none d-sm-inline-block">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login Section -->
+  <section class="auth-wrapper" style="background: linear-gradient(rgba(13, 110, 253, 0.85), rgba(33, 37, 41, 0.9)), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1920&q=80') no-repeat center center / cover;">
+    <div class="container py-5 d-flex justify-content-center">
+      <div class="bg-bg-color rounded-4 shadow-lg border border-light p-4 p-md-5 w-100 position-relative z-1" style="max-width: 450px; background-color: var(--card-bg);">
+        <a href="index.html" class="text-decoration-none text-muted small fw-medium mb-4 d-inline-block hover-opacity">
+          <i class="bi bi-arrow-left me-1"></i> Back to Home
+        </a>
+        <div class="text-center mb-5">
+              <h2 class="fw-bold mb-2">Welcome Back</h2>
+              <p class="text-muted">Enter your details to access your MedCode dashboard.</p>
+            </div>
+            
+            <form action="dashboard.html" method="get">
+              <div class="mb-4">
+                <label for="email" class="form-label fw-medium">Email address</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent border-end-0 text-muted"><i class="bi bi-envelope"></i></span>
+                  <input type="email" class="form-control border-start-0 ps-0 text-dark" id="email" placeholder="name@practice.com" required>
+                </div>
+              </div>
+              
+              <div class="mb-4">
+                <!-- Forgot Password Link -->
+                <div class="d-flex justify-content-between">
+                  <label for="password" class="form-label fw-medium">Password</label>
+                  <a href="#" class="text-primary-custom text-decoration-none small fw-medium">Forgot password?</a>
+                </div>
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent border-end-0 text-muted"><i class="bi bi-lock"></i></span>
+                  <input type="password" class="form-control border-start-0 ps-0 text-dark" id="password" placeholder="••••••••" required>
+                </div>
+              </div>
+              
+              <div class="mb-4 form-check">
+                <input type="checkbox" class="form-check-input" id="rememberMe">
+                <label class="form-check-label text-muted small" for="rememberMe">Remember me for 30 days</label>
+              </div>
+              
+              <button type="submit" class="btn btn-primary-custom w-100 mb-3">Login to Dashboard</button>
+            </form>
+            
+            <div class="divider">or continue with</div>
+            
+            <div class="row g-3 mb-4">
+              <div class="col-6">
+                <a href="#" class="social-login-btn w-100">
+                  <i class="bi bi-google text-danger"></i> Google
+                </a>
+              </div>
+              <div class="col-6">
+                <a href="#" class="social-login-btn w-100">
+                  <i class="bi bi-microsoft text-info"></i> Microsoft
+                </a>
+              </div>
+            </div>
+            
+            <p class="text-center text-muted small mb-0">
+              Don't have an account? <a href="signup.html" class="text-primary-custom fw-bold text-decoration-none">Sign up for free</a>
+            </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
