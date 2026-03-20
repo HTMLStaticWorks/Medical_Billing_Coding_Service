@@ -22,11 +22,12 @@
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
   <!-- Header / Navbar -->
-  <nav class="navbar navbar-expand-lg sticky-top">
+  <nav class="navbar navbar-expand-lg sticky-top glass-card">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <i class="bi bi-file-medical text-primary-custom"></i>
@@ -190,7 +191,7 @@
   <!-- CTA Banner -->
   <section class="py-5 bg-primary-custom text-white text-center">
     <div class="container py-3">
-      <h3 class="fw-bold mb-3">Not sure which services you need?</h3>
+      <h3 data-aos="fade-up" class="fw-bold mb-3">Not sure which services you need?</h3>
       <p class="mb-4 opacity-75">Schedule a free consultation with our experts to audit your current revenue cycle.</p>
       <a href="signup.html" class="btn btn-light text-primary-custom fw-bold px-4 py-2">Get a Free Audit</a>
     </div>
@@ -264,5 +265,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS -->
   <script src="assets/js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 800, once: true });</script>
 </body>
 </html>

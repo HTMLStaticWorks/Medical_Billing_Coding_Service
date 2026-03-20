@@ -22,11 +22,12 @@
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
   <!-- Header / Navbar -->
-  <nav class="navbar navbar-expand-lg sticky-top">
+  <nav class="navbar navbar-expand-lg sticky-top glass-card">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <i class="bi bi-file-medical text-primary-custom"></i>
@@ -90,16 +91,16 @@
           <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80" alt="Our Team" class="img-fluid rounded-4 shadow-lg">
         </div>
         <div class="col-lg-6 px-lg-5">
-          <h2 class="fw-bold fs-1 mb-4">Our Mission</h2>
+          <h2 data-aos="fade-right" class="fw-bold fs-1 text-gradient mb-4">Our Mission</h2>
           <p class="text-muted mb-4 fs-5">At MedCode, our mission is to simplify the complexities of medical billing and coding so that healthcare providers can focus on what matters most: patient care.</p>
           <p class="text-muted mb-4">Founded by industry veterans, we've built a data-driven platform that integrates seamlessly with your existing EHR/EMR systems, ensuring rapid claim submissions, minimal denials, and complete HIPAA compliance.</p>
           <div class="row mt-4">
             <div class="col-6">
-              <h3 class="fw-bold text-primary-custom">10+</h3>
+              <h3 data-aos="fade-up" class="fw-bold text-primary-custom">10+</h3>
               <p class="text-muted small fw-medium">Years Experience</p>
             </div>
             <div class="col-6">
-              <h3 class="fw-bold text-primary-custom">500+</h3>
+              <h3 data-aos="fade-up" class="fw-bold text-primary-custom">500+</h3>
               <p class="text-muted small fw-medium">Practices Supported</p>
             </div>
           </div>
@@ -111,7 +112,7 @@
   <!-- CTA Banner -->
   <section class="py-5 bg-primary-custom text-white text-center">
     <div class="container py-3">
-      <h3 class="fw-bold mb-3">Join us in transforming healthcare administration</h3>
+      <h3 data-aos="fade-up" class="fw-bold mb-3">Join us in transforming healthcare administration</h3>
       <p class="mb-4 opacity-75">Partner with MedCode today and watch your revenue cycle thrive.</p>
       <a href="signup.html" class="btn btn-light text-primary-custom fw-bold px-4 py-2">Get Started</a>
     </div>
@@ -174,5 +175,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 800, once: true });</script>
 </body>
 </html>
