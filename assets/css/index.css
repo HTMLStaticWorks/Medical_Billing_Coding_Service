@@ -380,6 +380,88 @@ body {
   box-shadow: 0 15px 35px rgba(0,0,0,0.3) !important;
 }
 
+/* Global Icon & Interactivity Enhancements */
+i {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s ease !important;
+  display: inline-block;
+}
+i:hover {
+  transform: scale(1.15) rotate(5deg);
+  color: var(--secondary-color) !important;
+}
+
+/* Card & Icon Box Interactions */
+.custom-card:hover .icon-box i {
+  transform: scale(1.2) rotate(10deg);
+}
+.icon-box:hover {
+  background-color: rgba(13, 110, 253, 0.15) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.1);
+}
+.icon-box:hover i {
+  color: var(--primary-color) !important;
+}
+
+/* Feature Card Specific Hover */
+.feature-card:hover .icon-box {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+}
+.feature-card:hover .icon-box i {
+  color: white !important;
+}
+
+/* Footer Social Icon Polishing */
+.social-icon:hover i {
+  transform: scale(1.2);
+}
+
+/* Premium Elevate Enhancement */
+.hover-elevate:hover i {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Dashboard Sidebar Icon Hover */
+.sidebar-link:hover i {
+  transform: translateX(3px) scale(1.1);
+}
+
+/* Play Button & Dashboard Specifics */
+.play-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  font-size: 2rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.4);
+  animation: pulse-primary 2s infinite;
+}
+.play-btn:hover {
+  transform: scale(1.1);
+  background-color: white;
+  color: var(--primary-color);
+  box-shadow: 0 0 0 20px rgba(13, 110, 253, 0);
+}
+
+@keyframes pulse-primary {
+  0% { box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.4); }
+  70% { box-shadow: 0 0 0 20px rgba(13, 110, 253, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(13, 110, 253, 0); }
+}
+
+/* Dashboard & General Icon Container Hover */
+.card:hover .bg-primary.bg-opacity-10 i, .d-flex:hover .bg-primary.bg-opacity-10 i { color: var(--primary-color) !important; transform: scale(1.15); }
+.card:hover .bg-secondary.bg-opacity-10 i, .d-flex:hover .bg-secondary.bg-opacity-10 i { color: var(--secondary-color) !important; transform: scale(1.15); }
+.card:hover .bg-danger.bg-opacity-10 i, .d-flex:hover .bg-danger.bg-opacity-10 i { color: #dc3545 !important; transform: scale(1.15); }
+.card:hover .bg-info.bg-opacity-10 i, .d-flex:hover .bg-info.bg-opacity-10 i { color: #0dcaf0 !important; transform: scale(1.15); }
+.card:hover .bg-success.bg-opacity-10 i, .d-flex:hover .bg-success.bg-opacity-10 i { color: #198754 !important; transform: scale(1.15); }
+
 /* Responsive fixes */
 @media (max-width: 991px) {
   .navbar-collapse {
