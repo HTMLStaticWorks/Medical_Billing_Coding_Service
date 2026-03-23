@@ -109,6 +109,7 @@ body {
   font-weight: 500;
   color: var(--text-dark) !important;
   transition: color 0.3s;
+  white-space: nowrap;
 }
 .nav-link:hover, .nav-link.active {
   color: var(--primary-color) !important;
@@ -204,7 +205,7 @@ body {
   background: linear-gradient(135deg, #1e2227 0%, var(--bg-color) 100%);
 }
 .hero-title {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -275,9 +276,10 @@ body {
 
 /* Auth Pages */
 .auth-wrapper {
-  min-height: calc(100vh - 80px); /* Approx minus navbar */
+  min-height: 100vh;
   display: flex;
   align-items: center;
+  padding: 2rem 0;
 }
 .auth-image {
   border-radius: 1rem;
@@ -376,4 +378,66 @@ body {
 }
 [data-bs-theme="dark"] .hover-elevate:hover {
   box-shadow: 0 15px 35px rgba(0,0,0,0.3) !important;
+}
+
+/* Responsive fixes */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    padding: 1rem 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: 0.5rem;
+  }
+  .navbar-collapse .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 4rem 0;
+  }
+  .auth-wrapper {
+    align-items: flex-start;
+    padding-top: 2rem;
+  }
+  .custom-card {
+    padding: 1.25rem;
+  }
+  .data-number {
+    font-size: 2rem;
+  }
+}
+
+/* Form control dark mode fix */
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .input-group-text {
+  background-color: var(--card-bg);
+  color: var(--text-dark);
+  border-color: var(--border-color);
+}
+[data-bs-theme="dark"] .form-control::placeholder {
+  color: #6c757d;
+}
+
+/* Accordion theme fix */
+.accordion-button {
+  background-color: var(--card-bg);
+  color: var(--text-dark);
+}
+.accordion-button:not(.collapsed) {
+  background-color: rgba(13, 110, 253, 0.05);
+  color: var(--primary-color);
+  box-shadow: none;
+}
+[data-bs-theme="dark"] .accordion-button {
+  background-color: var(--card-bg);
+  color: var(--text-dark);
+}
+[data-bs-theme="dark"] .accordion-item {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+}
+[data-bs-theme="dark"] .accordion-body {
+  background-color: var(--card-bg);
 }

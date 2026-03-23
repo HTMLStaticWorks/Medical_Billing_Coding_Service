@@ -34,46 +34,33 @@
         <span>MedCode</span>
       </a>
 
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title d-flex align-items-center gap-2" id="offcanvasNavbarLabel">
-            <i class="bi bi-file-medical text-primary-custom"></i> MedCode
-          </h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 pe-3">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
-            <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="dashboard.html">Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
-            </li>
-          </ul>
-          
-          <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-3 mt-3 mt-lg-0">
-            <button id="theme-toggle" class="btn btn-link nav-link px-0 me-lg-3" aria-label="Toggle theme">
-              <i id="theme-icon" class="bi bi-moon-fill fs-5"></i>
-            </button>
-            <a href="login.html" class="btn btn-primary-custom w-100 w-lg-auto text-center" style="min-width: 120px;">Login</a>
-            <a href="signup.html" class="btn btn-primary-custom w-100 w-lg-auto text-center" style="min-width: 120px;">Sign Up</a>
-          </div>
+      <!-- Desktop & Mobile Menu -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 pe-3 py-3 py-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-3 pb-3 pb-lg-0 mt-3 mt-lg-0">
+          <button id="theme-toggle" class="btn btn-link nav-link px-0 me-lg-3 text-start" aria-label="Toggle theme">
+            <i id="theme-icon" class="bi bi-moon-fill fs-5"></i>
+          </button>
+          <a href="login.html" class="btn btn-primary-custom w-100 w-lg-auto text-center" style="min-width: 120px;">Login</a>
+          <a href="signup.html" class="btn btn-primary-custom w-100 w-lg-auto text-center" style="min-width: 120px;">Sign Up</a>
         </div>
       </div>
     </div>
   </nav>
+
 
   <!-- Page Header -->
   <section class="py-5 bg-tertiary-custom text-center border-bottom border-light">
@@ -188,6 +175,225 @@
     </div>
   </section>
 
+  <!-- How It Works Section -->
+  <section class="py-5 bg-tertiary-custom">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 data-aos="fade-up" class="fw-bold fs-1 text-gradient">How Our <span class="text-primary-custom">Process Works</span></h2>
+        <p class="text-muted lead mx-auto" style="max-width: 700px;">From onboarding to full revenue optimization in four simple steps. No disruption to your daily workflow.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 text-center" data-aos="fade-up">
+          <div class="icon-box mx-auto bg-primary text-white mb-3" style="width:70px;height:70px;font-size:1.8rem;">1</div>
+          <h5 class="fw-bold">Free Audit</h5>
+          <p class="text-muted small">We analyze your current billing process, identify leakages, and provide a zero-obligation revenue cycle assessment.</p>
+        </div>
+        <div class="col-md-6 col-lg-3 text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon-box mx-auto bg-primary text-white mb-3" style="width:70px;height:70px;font-size:1.8rem;">2</div>
+          <h5 class="fw-bold">Seamless Onboarding</h5>
+          <p class="text-muted small">Our team integrates directly with your EHR/EMR in as little as 48 hours—no downtime, no disruption.</p>
+        </div>
+        <div class="col-md-6 col-lg-3 text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon-box mx-auto bg-primary text-white mb-3" style="width:70px;height:70px;font-size:1.8rem;">3</div>
+          <h5 class="fw-bold">Expert Coding & Submission</h5>
+          <p class="text-muted small">Certified coders process encounters, scrub claims for errors, and submit within 24 hours for maximum reimbursement.</p>
+        </div>
+        <div class="col-md-6 col-lg-3 text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="icon-box mx-auto bg-secondary-custom text-white mb-3" style="width:70px;height:70px;font-size:1.8rem;">4</div>
+          <h5 class="fw-bold">Monitor & Optimize</h5>
+          <p class="text-muted small">Track everything in real-time via your MedCode dashboard. Monthly reports and strategy reviews are included.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialties We Serve -->
+  <section class="py-5 my-4">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 data-aos="fade-up" class="fw-bold fs-1 text-gradient">Specialties <span class="text-secondary-custom">We Serve</span></h2>
+        <p class="text-muted lead mx-auto" style="max-width: 700px;">Our certified coders cover the full spectrum of medical specialties with deep, up-to-date expertise in each field.</p>
+      </div>
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="d-flex align-items-center gap-3 p-3 rounded-3 border bg-card shadow-sm">
+            <i class="bi bi-heart-pulse text-primary-custom fs-4"></i>
+            <span class="fw-medium small">Cardiology</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="d-flex align-items-center gap-3 p-3 rounded-3 border bg-card shadow-sm">
+            <i class="bi bi-activity text-primary-custom fs-4"></i>
+            <span class="fw-medium small">Orthopedics</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="d-flex align-items-center gap-3 p-3 rounded-3 border bg-card shadow-sm">
+            <i class="bi bi-brain text-primary-custom fs-4"></i>
+            <span class="fw-medium small">Neurology</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="d-flex align-items-center gap-3 p-3 rounded-3 border bg-card shadow-sm">
+            <i class="bi bi-person-heart text-primary-custom fs-4"></i>
+            <span class="fw-medium small">Internal Medicine</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="d-flex align-items-center gap-3 p-3 rounded-3 border bg-card shadow-sm">
+            <i class="bi bi-eye text-primary-custom fs-4"></i>
+            <span class="fw-medium small">Ophthalmology</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="d-flex align-items-center gap-3 p-3 rounded-3 border bg-card shadow-sm">
+            <i class="bi bi-lungs text-primary-custom fs-4"></i>
+            <span class="fw-medium small">Pulmonology</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="d-flex align-items-center gap-3 p-3 rounded-3 border bg-card shadow-sm">
+            <i class="bi bi-bandaid text-primary-custom fs-4"></i>
+            <span class="fw-medium small">Dermatology</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="d-flex align-items-center gap-3 p-3 rounded-3 border bg-card shadow-sm">
+            <i class="bi bi-gender-ambiguous text-primary-custom fs-4"></i>
+            <span class="fw-medium small">Pediatrics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="py-5 bg-tertiary-custom">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 data-aos="fade-up" class="fw-bold fs-1 text-gradient">Simple, Transparent <span class="text-primary-custom">Pricing</span></h2>
+        <p class="text-muted lead mx-auto" style="max-width: 700px;">No setup fees, no hidden charges. Pay only a percentage of collected revenue — we succeed when you succeed.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <!-- Starter -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="card custom-card border-0 shadow-sm h-100 p-4">
+            <div class="mb-4">
+              <span class="badge bg-secondary-custom mb-3 px-3 py-2 rounded-pill">Starter</span>
+              <div class="d-flex align-items-end gap-1 mb-2">
+                <h2 class="fw-bold text-primary-custom mb-0">4%</h2>
+                <span class="text-muted mb-1">of collections</span>
+              </div>
+              <p class="text-muted small">Ideal for solo practices and small clinics just getting started.</p>
+            </div>
+            <ul class="list-unstyled mb-4">
+              <li class="mb-2 d-flex gap-2"><i class="bi bi-check-circle-fill text-secondary-custom"></i> Medical Billing & Coding</li>
+              <li class="mb-2 d-flex gap-2"><i class="bi bi-check-circle-fill text-secondary-custom"></i> Claim Submission</li>
+              <li class="mb-2 d-flex gap-2"><i class="bi bi-check-circle-fill text-secondary-custom"></i> Monthly Reports</li>
+              <li class="mb-2 d-flex gap-2 text-muted"><i class="bi bi-x-circle text-muted"></i> Denial Management</li>
+              <li class="mb-2 d-flex gap-2 text-muted"><i class="bi bi-x-circle text-muted"></i> Dedicated Account Manager</li>
+            </ul>
+            <a href="signup.html" class="btn btn-outline-custom mt-auto">Get Started</a>
+          </div>
+        </div>
+        <!-- Growth -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card custom-card border-0 shadow-lg h-100 p-4 position-relative" style="border-top: 4px solid var(--primary-color) !important;">
+            <span class="position-absolute top-0 start-50 translate-middle badge bg-primary rounded-pill px-3" style="font-size:0.75rem;">Most Popular</span>
+            <div class="mb-4 mt-2">
+              <span class="badge bg-primary mb-3 px-3 py-2 rounded-pill">Growth</span>
+              <div class="d-flex align-items-end gap-1 mb-2">
+                <h2 class="fw-bold text-primary-custom mb-0">6%</h2>
+                <span class="text-muted mb-1">of collections</span>
+              </div>
+              <p class="text-muted small">Perfect for growing practices wanting full revenue cycle management.</p>
+            </div>
+            <ul class="list-unstyled mb-4">
+              <li class="mb-2 d-flex gap-2"><i class="bi bi-check-circle-fill text-secondary-custom"></i> Everything in Starter</li>
+              <li class="mb-2 d-flex gap-2"><i class="bi bi-check-circle-fill text-secondary-custom"></i> Denial Management & Appeals</li>
+              <li class="mb-2 d-flex gap-2"><i class="bi bi-check-circle-fill text-secondary-custom"></i> A/R Follow-Up</li>
+              <li class="mb-2 d-flex gap-2"><i class="bi bi-check-circle-fill text-secondary-custom"></i> Patient Billing</li>
+              <li class="mb-2 d-flex gap-2 text-muted"><i class="bi bi-x-circle text-muted"></i> Dedicated Account Manager</li>
+            </ul>
+            <a href="signup.html" class="btn btn-primary-custom mt-auto">Get Started</a>
+          </div>
+        </div>
+        <!-- Enterprise -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card custom-card border-0 shadow-sm h-100 p-4">
+            <div class="mb-4">
+              <span class="badge bg-secondary-custom mb-3 px-3 py-2 rounded-pill">Enterprise</span>
+              <div class="d-flex align-items-end gap-1 mb-2">
+                <h2 class="fw-bold text-primary-custom mb-0">Custom</h2>
+              </div>
+              <p class="text-muted small">Tailored for large practices, health systems, and multi-location groups.</p>
+            </div>
+            <ul class="list-unstyled mb-4">
+              <li class="mb-2 d-flex gap-2"><i class="bi bi-check-circle-fill text-secondary-custom"></i> Everything in Growth</li>
+              <li class="mb-2 d-flex gap-2"><i class="bi bi-check-circle-fill text-secondary-custom"></i> Dedicated Account Manager</li>
+              <li class="mb-2 d-flex gap-2"><i class="bi bi-check-circle-fill text-secondary-custom"></i> Provider Credentialing</li>
+              <li class="mb-2 d-flex gap-2"><i class="bi bi-check-circle-fill text-secondary-custom"></i> Custom Reporting & Analytics</li>
+              <li class="mb-2 d-flex gap-2"><i class="bi bi-check-circle-fill text-secondary-custom"></i> 24/7 Priority Support</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline-custom mt-auto">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-5 my-4">
+    <div class="container" style="max-width: 800px;">
+      <div class="text-center mb-5">
+        <h2 data-aos="fade-up" class="fw-bold fs-1 text-gradient">Frequently Asked <span class="text-secondary-custom">Questions</span></h2>
+        <p class="text-muted lead">Answers to the most common questions about our billing and coding services.</p>
+      </div>
+      <div class="accordion accordion-flush" id="serviceFAQ">
+        <div class="accordion-item border rounded-3 mb-3 shadow-sm">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed rounded-3 fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">How quickly can MedCode integrate with our EHR?</button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#serviceFAQ">
+            <div class="accordion-body text-muted">Most integrations are completed within 24–48 hours. We support over 50 major EHR/EMR platforms including Epic, Cerner, AthenaHealth, eClinicalWorks, and NextGen. Our technical team handles the entire process with zero downtime.</div>
+          </div>
+        </div>
+        <div class="accordion-item border rounded-3 mb-3 shadow-sm">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed rounded-3 fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Do you handle claims for all insurance payers?</button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#serviceFAQ">
+            <div class="accordion-body text-muted">Yes. We submit to all commercial payers, Medicare, Medicaid, and all government programs. Our team stays current with each payer's billing requirements and fee schedules to maximize your reimbursement.</div>
+          </div>
+        </div>
+        <div class="accordion-item border rounded-3 mb-3 shadow-sm">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed rounded-3 fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">What happens if a claim is denied?</button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#serviceFAQ">
+            <div class="accordion-body text-muted">Our denial management team immediately analyzes the reason, corrects any coding or documentation errors, and resubmits the claim. We track all denials and provide monthly reports on denial trends so we can proactively prevent future ones.</div>
+          </div>
+        </div>
+        <div class="accordion-item border rounded-3 mb-3 shadow-sm">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed rounded-3 fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">Is our patient data secure with MedCode?</button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#serviceFAQ">
+            <div class="accordion-body text-muted">Absolutely. We are fully HIPAA-compliant, with 256-bit AES encryption for all data at rest and in transit. We conduct regular third-party security audits and maintain strict Business Associate Agreements (BAAs) with all clients.</div>
+          </div>
+        </div>
+        <div class="accordion-item border rounded-3 mb-3 shadow-sm">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed rounded-3 fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">Are there any long-term contracts?</button>
+          </h2>
+          <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#serviceFAQ">
+            <div class="accordion-body text-muted">We offer month-to-month agreements because we believe our results should speak for themselves. Clients who want greater pricing stability can opt for annual contracts with discounted rates.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Banner -->
   <section class="py-5 bg-primary-custom text-white text-center">
     <div class="container py-3">
@@ -196,6 +402,7 @@
       <a href="signup.html" class="btn btn-light text-primary-custom fw-bold px-4 py-2">Get a Free Audit</a>
     </div>
   </section>
+
 
   <!-- Footer -->
   <footer class="footer">
