@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up - MedCode | Medical Billing</title>
+  <title>Sign Up - MedPortal | Medical Billing</title>
   
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,34 +25,26 @@
 </head>
 <body>
 
-  <!-- Header / Navbar -->
-  <nav class="navbar navbar-expand-lg sticky-top glass-card">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <i class="bi bi-file-medical text-primary-custom"></i>
-        <span>MedCode</span>
-      </a>
 
-      <div class="d-flex align-items-center gap-3 ms-auto">
-        <button id="theme-toggle" class="btn btn-link nav-link px-0" aria-label="Toggle theme">
-          <i id="theme-icon" class="bi bi-moon-fill fs-5"></i>
-        </button>
-        <a href="login.html" class="btn btn-outline-custom d-none d-sm-inline-block">Login</a>
-      </div>
-    </div>
-  </nav>
 
   <!-- Signup Section -->
   <section class="auth-wrapper position-relative" style="background: linear-gradient(rgba(32, 201, 151, 0.85), rgba(33, 37, 41, 0.9)), url('https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1920&q=80') no-repeat center center / cover;">
     <div class="container py-5 d-flex justify-content-center">
-      <div data-aos="zoom-in" class="bg-card glass-card hover-elevate rounded-4 shadow-lg border border-light p-4 p-md-5 w-100 position-relative z-1" style="max-width: 500px; background-color: var(--card-bg);">
-        <a href="index.html" class="text-decoration-none text-muted small fw-medium mb-4 d-inline-block hover-opacity">
-          <i class="bi bi-arrow-left me-1"></i> Back to Home
-        </a>
-        <div class="text-center mb-4">
-              <h2 class="fw-bold mb-2">Create Account</h2>
-              <p class="text-muted">Start optimizing your given revenue cycle today.</p>
-            </div>
+      <div data-aos="zoom-in" class="bg-card rounded-4 shadow-lg border border-light p-4 p-md-5 w-100 position-relative z-1" style="max-width: 500px; background-color: var(--card-bg);">
+        
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="btn btn-link text-muted position-absolute top-0 end-0 m-3" aria-label="Toggle theme">
+          <i id="theme-icon" class="bi bi-moon-fill fs-5"></i>
+        </button>
+
+        <div class="text-center mb-4 mt-2">
+          <a class="navbar-brand d-inline-block mb-3" href="index.html" style="font-size: 2rem;">
+            <i class="bi bi-file-medical text-primary-custom"></i>
+            <span class="fw-bold text-primary-custom">MedPortal</span>
+          </a>
+          <h2 class="fw-bold mb-2">Create Account</h2>
+          <p class="text-muted">Start optimizing your revenue cycle today.</p>
+        </div>
             
             <form action="dashboard.html" method="get">
               <div class="mb-3">

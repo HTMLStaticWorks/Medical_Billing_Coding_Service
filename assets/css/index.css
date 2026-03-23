@@ -181,16 +181,33 @@ body {
 }
 
 .icon-box {
-  width: 60px;
-  height: 60px;
+  width: 72px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 1rem;
-  background-color: rgba(13, 110, 253, 0.1);
-  color: var(--primary-color);
-  font-size: 1.5rem;
+  border-radius: 1.25rem;
+  background-color: rgba(13, 110, 253, 0.08); /* Lighter blue for 2nd/3rd */
   margin-bottom: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  position: relative;
+}
+.icon-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.icon-box i {
+  font-size: 2rem;
+  transition: all 0.4s ease;
+}
+.icon-box.bg-primary-custom {
+  background-color: var(--primary-color) !important;
+}
+.icon-box.bg-primary-custom i {
+  color: white !important;
 }
 [data-bs-theme="dark"] .icon-box {
   background-color: rgba(61, 139, 253, 0.1);
@@ -404,12 +421,12 @@ i:hover {
 }
 
 /* Feature Card Specific Hover */
-.feature-card:hover .icon-box {
-  background-color: var(--primary-color) !important;
-  color: white !important;
+.custom-card:hover .icon-box.bg-primary-custom {
+  transform: scale(1.1) rotate(5deg);
 }
-.feature-card:hover .icon-box i {
-  color: white !important;
+.custom-card:hover .icon-box:not(.bg-primary-custom) {
+  background-color: rgba(13, 110, 253, 0.15) !important;
+  transform: scale(1.1) rotate(-5deg);
 }
 
 /* Footer Social Icon Polishing */

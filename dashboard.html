@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard - MedCode | Medical Billing</title>
+  <title>Dashboard - MedPortal | Medical Billing</title>
   
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,29 +27,29 @@
 
   <!-- Dashboard Top Navbar -->
   <nav class="navbar navbar-expand-lg bg-card sticky-top border-bottom border-light z-3">
-    <div class="container-fluid px-4">
-      <div class="d-flex align-items-center gap-3">
+    <div class="container-fluid px-3 px-md-4 d-flex flex-nowrap align-items-center">
+      <div class="d-flex align-items-center gap-2 gap-md-3 flex-shrink-0">
         <!-- Mobile Sidebar Toggle -->
-        <button class="btn btn-outline-secondary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas" aria-controls="sidebarOffcanvas">
+        <button class="btn btn-outline-secondary d-lg-none btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas" aria-controls="sidebarOffcanvas">
           <i class="bi bi-list"></i>
         </button>
-        <a class="navbar-brand m-0 pb-1" href="index.html">
+        <a class="navbar-brand m-0 pb-1 fs-6 fs-md-4 d-flex align-items-center gap-2" href="index.html">
           <i class="bi bi-file-medical text-primary-custom"></i>
-          <span>MedCode Portal</span>
+          <span>MedPortal</span>
         </a>
       </div>
 
-      <div class="d-flex align-items-center gap-3 ms-auto">
+      <div class="d-flex align-items-center gap-2 gap-md-3 ms-auto flex-nowrap">
         <!-- Theme Toggle -->
         <button id="theme-toggle" class="btn btn-link nav-link px-0" aria-label="Toggle theme">
-          <i id="theme-icon" class="bi bi-moon-fill fs-5"></i>
+          <i id="theme-icon" class="bi bi-moon-fill fs-6 fs-md-5"></i>
         </button>
         
         <!-- Notifications -->
         <div class="dropdown">
           <button class="btn btn-link nav-link position-relative p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-bell fs-5"></i>
-            <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+            <i class="bi bi-bell fs-6 fs-md-5"></i>
+            <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle" style="transform: translate(-50%, 0%) !important;">
               <span class="visually-hidden">New alerts</span>
             </span>
           </button>
@@ -65,7 +65,7 @@
         <!-- User Menu -->
         <div class="dropdown">
           <button class="btn btn-link nav-link p-0 d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://ui-avatars.com/api/?name=Dr+Smith&background=0d6efd&color=fff" alt="User Profile" class="rounded-circle" width="36" height="36">
+            <img src="https://ui-avatars.com/api/?name=Dr+Smith&background=0d6efd&color=fff" alt="User Profile" class="rounded-circle" width="32" height="32">
             <span class="d-none d-md-inline fw-medium small">Dr. Smith</span>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 mt-2">
@@ -130,7 +130,7 @@
       <div class="offcanvas offcanvas-start border-end-0" tabindex="-1" id="sidebarOffcanvas" aria-labelledby="sidebarOffcanvasLabel">
         <div class="offcanvas-header bg-card border-bottom border-light">
           <h5 class="offcanvas-title d-flex align-items-center gap-2" id="sidebarOffcanvasLabel">
-            <i class="bi bi-file-medical text-primary-custom"></i> MedCode
+            <i class="bi bi-file-medical text-primary-custom"></i> MedPortal
           </h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
@@ -296,7 +296,7 @@
                   </a>
                   <a href="#" class="list-group-item list-group-item-action border-0 px-4 py-3">
                     <div class="d-flex w-100 justify-content-between">
-                      <h6 class="mb-1 fw-bold w-100 text-truncate">Welcome to MedCode Portal</h6>
+                      <h6 class="mb-1 fw-bold w-100 text-truncate">Welcome to MedPortal</h6>
                       <small class="text-muted ms-2 text-nowrap">1d ago</small>
                     </div>
                     <p class="mb-1 text-muted small text-truncate">Here is a quick guide on how to upload your superbills...</p>

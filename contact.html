@@ -56,11 +56,33 @@
   </nav>
 
 
-  <!-- Page Header -->
-  <section class="py-5 bg-tertiary-custom text-center border-bottom border-light">
-    <div class="container py-4">
-      <h1 class="fw-bold fs-1 mb-3">Contact <span class="text-primary-custom">Us</span></h1>
-      <p class="lead text-muted mx-auto" style="max-width: 700px;">Have questions about our revenue cycle management? We're here to help.</p>
+  <!-- Page Header / Hero with Map -->
+  <section class="py-5 bg-tertiary-custom border-bottom border-light position-relative overflow-hidden">
+    <div class="container py-4 position-relative" style="z-index: 2;">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6">
+          <span class="badge bg-primary-custom mb-3 px-3 py-2 rounded-pill">Get in Touch</span>
+          <h1 data-aos="fade-down" class="fw-bold display-4 mb-3">Contact <span class="text-primary-custom">Us</span></h1>
+          <p class="lead text-muted mb-4">Have questions about our revenue cycle management? We're here to help you optimize your practice's financial performance.</p>
+          <div class="d-flex align-items-center gap-3 mb-2" data-aos="fade-up">
+            <div class="bg-white rounded-circle shadow-sm p-3 text-primary-custom">
+              <i class="bi bi-geo-alt-fill fs-5"></i>
+            </div>
+            <div>
+              <p class="text-muted small fw-bold mb-0">Our Office</p>
+              <span class="fw-medium">123 Health Ave, Suite 400, NY 10001</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div data-aos="fade-left" class="map-container rounded-4 shadow-lg border border-light overflow-hidden bg-white p-2">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.2528082187!2d-74.1197637392!3d40.6976637487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1711194511000!5m2!1sen!2sin" 
+              width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-3">
+            </iframe>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -93,7 +115,7 @@
               </div>
             </div>
             
-            <div class="d-flex align-items-start">
+            <div class="d-flex align-items-start mb-5">
               <div class="bg-info bg-opacity-10 text-info p-3 rounded-circle me-3">
                 <i class="bi bi-envelope-fill fs-5"></i>
               </div>
@@ -101,6 +123,26 @@
                 <h6 class="fw-bold mb-1">Email Address</h6>
                 <p class="text-muted mb-0 small">support@medcode.com<br>sales@medcode.com</p>
               </div>
+            </div>
+
+            <hr class="my-5 border-light">
+
+            <div class="mb-5">
+              <h4 class="fw-bold mb-4">Business Hours</h4>
+              <ul class="list-unstyled">
+                <li class="d-flex justify-content-between mb-2 border-bottom border-light pb-2">
+                  <span class="text-muted small">Monday - Friday</span>
+                  <span class="fw-bold small">9:00 AM - 6:00 PM</span>
+                </li>
+                <li class="d-flex justify-content-between mb-2 border-bottom border-light pb-2">
+                  <span class="text-muted small">Saturday</span>
+                  <span class="fw-bold small">10:00 AM - 2:00 PM</span>
+                </li>
+                <li class="d-flex justify-content-between">
+                  <span class="text-muted small">Sunday</span>
+                  <span class="text-danger fw-bold small text-uppercase">Closed</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -138,6 +180,56 @@
           </div>
         </div>
 
+      </div>
+
+      <!-- FAQ Section for Contact Page -->
+      <div class="mt-5 pt-5 border-top border-light">
+        <div class="text-center mb-5">
+          <h2 data-aos="fade-up" class="fw-bold fs-1 text-gradient">Frequently Asked <span class="text-secondary-custom">Questions</span></h2>
+          <p class="text-muted lead">Quick answers to some common inquiries we receive.</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="accordion accordion-flush" id="contactFAQ">
+              <div class="accordion-item border rounded-3 mb-3 shadow-sm overflow-hidden">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#cfaq1">
+                    How quickly do you respond to inquiries?
+                  </button>
+                </h2>
+                <div id="cfaq1" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
+                  <div class="accordion-body text-muted small">
+                    Our team typically responds to all inquiries within 2 to 4 business hours. For urgent technical support, please use the dedicated support number in our client portal.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border rounded-3 mb-3 shadow-sm overflow-hidden">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#cfaq2">
+                    Can I request a custom pricing quote?
+                  </button>
+                </h2>
+                <div id="cfaq2" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
+                  <div class="accordion-body text-muted small">
+                    Absolutely. If you have a large practice or multiple locations, please mention this in your message. Our sales team will reach out to schedule a custom strategy session and provide a tailored quote.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border rounded-3 mb-3 shadow-sm overflow-hidden">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#cfaq3">
+                    Is there a fee for the initial RCM audit?
+                  </button>
+                </h2>
+                <div id="cfaq3" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
+                  <div class="accordion-body text-muted small">
+                    No, we provide a comprehensive Revenue Cycle Management audit completely free of charge and with no obligation for all healthcare providers.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
