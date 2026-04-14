@@ -33,18 +33,19 @@
   <!-- Login Section -->
   <section class="auth-wrapper"
     style="min-height: 100vh; background: linear-gradient(rgba(13, 110, 253, 0.85), rgba(33, 37, 41, 0.9)), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1920&q=80') no-repeat center center / cover;">
+    
+    <!-- RTL/LTR Toggle -->
+    <button id="dir-toggle" class="dir-toggle-auth" aria-label="Toggle direction">
+      <i class="bi bi-translate"></i>
+    </button>
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle-auth" aria-label="Toggle theme">
+      <i id="theme-icon" class="bi bi-moon-fill"></i>
+    </button>
+
     <div class="container py-5 d-flex justify-content-center">
       <div class="bg-bg-color rounded-4 shadow-lg border border-light p-4 p-md-5 w-100 position-relative z-1"
         style="max-width: 450px; background-color: var(--card-bg);">
-
-        <!-- RTL/LTR Toggle -->
-        <button id="dir-toggle" class="dir-toggle-auth" aria-label="Toggle direction">
-          <i class="bi bi-translate"></i>
-        </button>
-        <!-- Theme Toggle -->
-        <button id="theme-toggle" class="theme-toggle-auth" aria-label="Toggle theme">
-          <i id="theme-icon" class="bi bi-moon-fill"></i>
-        </button>
 
         <div class="text-center mb-4 mt-2">
           <a class="navbar-brand d-inline-block mb-3" href="index.html" style="font-size: 2rem;">
@@ -101,7 +102,7 @@
           </div>
           <div class="col">
             <a href="#" class="social-login-btn w-100 h-100" aria-label="Login with Apple">
-              <i class="bi bi-apple text-dark fs-4"></i>
+              <i class="bi bi-apple fs-4"></i>
             </a>
           </div>
         </div>
