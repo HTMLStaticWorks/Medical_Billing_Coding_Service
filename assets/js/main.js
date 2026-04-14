@@ -31,6 +31,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // RTL/LTR Toggle logic
+  const dirToggle = document.getElementById('dir-toggle');
+  if (dirToggle) {
+    const savedDir = localStorage.getItem('dir') || 'ltr';
+    htmlElement.setAttribute('dir', savedDir);
+
+    dirToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const currentDir = htmlElement.getAttribute('dir');
+      const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
+      htmlElement.setAttribute('dir', newDir);
+      localStorage.setItem('dir', newDir);
+    });
+  }
+
   function updateThemeIcon(theme) {
     if (themeIcon) {
       if (theme === 'dark') {
@@ -62,5 +77,65 @@ document.addEventListener('DOMContentLoaded', () => {
         behavior: 'smooth'
       });
     });
+  }
+
+  // Mobile Menu Overlay Logic
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+  
+  if (navbarToggler && navbarCollapse) {
+    // Create backdrop element
+    const backdrop = document.createElement('div');
+    backdrop.className = 'menu-backdrop';
+    document.body.appendChild(backdrop);
+
+    navbarToggler.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = navbarCollapse.classList.contains('show');
+      if (!isOpen) {
+        showMenu();
+      } else {
+        hideMenu();
+      }
+    });
+
+    backdrop.addEventListener('click', hideMenu);
+
+    // Close menu when clicking nav links
+    const navLinks = navbarCollapse.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', hideMenu);
+    });
+
+    function showMenu() {
+      // Inject Header if not exists
+      if (!navbarCollapse.querySelector('.menu-header')) {
+        const header = document.createElement('div');
+        header.className = 'menu-header';
+        header.innerHTML = `
+          <a href="index.html" class="menu-brand">
+            <i class="bi bi-file-medical text-primary-custom me-2"></i>MedCode
+          </a>
+          <button class="menu-close-btn" aria-label="Close Menu">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        `;
+        navbarCollapse.prepend(header);
+        header.querySelector('.menu-close-btn').addEventListener('click', hideMenu);
+      }
+
+      navbarCollapse.classList.add('show');
+      backdrop.classList.add('show');
+      document.body.classList.add('menu-open');
+      navbarToggler.setAttribute('aria-expanded', 'true');
+    }
+
+    function hideMenu() {
+      navbarCollapse.classList.remove('show');
+      backdrop.classList.remove('show');
+      document.body.classList.remove('menu-open');
+      navbarToggler.setAttribute('aria-expanded', 'false');
+    }
   }
 });

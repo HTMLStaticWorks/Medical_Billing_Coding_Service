@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard - MedPortal | Medical Billing</title>
+  <title>Claims - MedPortal | Medical Billing</title>
   
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -92,7 +92,7 @@
           <p class="text-muted small fw-bold text-uppercase px-4 mb-2 mt-2">Menu</p>
           <ul class="nav flex-column mb-auto">
             <li class="nav-item">
-              <a href="dashboard.html" class="sidebar-link active" aria-current="page">
+              <a href="dashboard.html" class="sidebar-link">
                 <i class="bi bi-grid-1x2"></i> Analytics
               </a>
             </li>
@@ -102,7 +102,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="dashboard-claims.html" class="sidebar-link">
+              <a href="dashboard-claims.html" class="sidebar-link active" aria-current="page">
                 <i class="bi bi-file-earmark-text"></i> Orders (Claims)
               </a>
             </li>
@@ -142,7 +142,7 @@
           <div class="sidebar h-100 border-0">
             <ul class="nav flex-column pt-3">
               <li class="nav-item">
-                <a href="dashboard.html" class="sidebar-link active" aria-current="page">
+                <a href="dashboard.html" class="sidebar-link">
                   <i class="bi bi-grid-1x2"></i> Analytics
                 </a>
               </li>
@@ -152,7 +152,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="dashboard-claims.html" class="sidebar-link">
+                <a href="dashboard-claims.html" class="sidebar-link active" aria-current="page">
                   <i class="bi bi-file-earmark-text"></i> Orders (Claims)
                 </a>
               </li>
@@ -175,159 +175,45 @@
       <main class="col-lg-10 ms-sm-auto px-md-4 py-4 dashboard-content">
         
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-4">
-          <h1 class="h2 fw-bold mb-0">Analytics Overview</h1>
+          <h1 class="h2 fw-bold mb-0">Claims & Orders</h1>
           <div class="btn-toolbar mb-2 mb-md-0">
-            <div class="btn-group me-2">
-              <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-            </div>
-            <button type="button" class="btn btn-sm btn-primary-custom d-flex align-items-center gap-2">
-              <i class="bi bi-calendar3"></i> This Month
+            <button type="button" class="btn btn-primary-custom d-flex align-items-center gap-2">
+              <i class="bi bi-plus-circle"></i> Create New Claim
             </button>
           </div>
         </div>
 
-        <!-- KPI Cards -->
-        <div class="row g-4 mb-4">
-          <div class="col-xl-3 col-sm-6">
-            <div class="card card-dashboard h-100 p-3">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h6 class="text-muted fw-bold mb-0">Total Revenue</h6>
-                  <div class="bg-primary bg-opacity-10 text-primary p-2 rounded-3">
-                    <i class="bi bi-currency-dollar fs-5"></i>
-                  </div>
+        <!-- Filter Bar -->
+        <div class="row g-3 mb-4">
+          <div class="col-lg-12">
+            <div class="card card-dashboard p-2 px-3 border-0">
+              <div class="d-flex flex-wrap align-items-center gap-3">
+                <span class="text-muted small fw-bold">FILTER BY:</span>
+                <div class="btn-group btn-group-sm">
+                  <button type="button" class="btn btn-outline-primary active">All Claims</button>
+                  <button type="button" class="btn btn-outline-primary">Paid</button>
+                  <button type="button" class="btn btn-outline-primary">Pending</button>
+                  <button type="button" class="btn btn-outline-primary">Denied</button>
                 </div>
-                <h3 data-aos="fade-up" class="fw-bold mb-2">$145,000</h3>
-                <p class="mb-0 text-success small fw-medium"><i class="bi bi-arrow-up-right me-1"></i> +12.5% from last month</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-xl-3 col-sm-6">
-            <div class="card card-dashboard h-100 p-3">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h6 class="text-muted fw-bold mb-0">Claims Submitted</h6>
-                  <div class="bg-secondary bg-opacity-10 text-secondary p-2 rounded-3">
-                    <i class="bi bi-file-earmark-text fs-5"></i>
-                  </div>
+                <div class="ms-md-auto d-flex gap-2">
+                   <input type="date" class="form-control form-control-sm" style="width: 150px;">
+                   <input type="text" class="form-control form-control-sm" placeholder="Search Claims..." style="width: 200px;">
                 </div>
-                <h3 data-aos="fade-up" class="fw-bold mb-2">1,240</h3>
-                <p class="mb-0 text-success small fw-medium"><i class="bi bi-arrow-up-right me-1"></i> +5.2% from last month</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-xl-3 col-sm-6">
-            <div class="card card-dashboard h-100 p-3">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h6 class="text-muted fw-bold mb-0">Denial Rate</h6>
-                  <div class="bg-danger bg-opacity-10 text-danger p-2 rounded-3">
-                    <i class="bi bi-exclamation-triangle fs-5"></i>
-                  </div>
-                </div>
-                <h3 data-aos="fade-up" class="fw-bold mb-2">2.4%</h3>
-                <p class="mb-0 text-success small fw-medium"><i class="bi bi-arrow-down-right me-1"></i> -0.8% from last month</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-xl-3 col-sm-6">
-            <div class="card card-dashboard h-100 p-3">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h6 class="text-muted fw-bold mb-0">Days in A/R</h6>
-                  <div class="bg-info bg-opacity-10 text-info p-2 rounded-3">
-                    <i class="bi bi-clock-history fs-5"></i>
-                  </div>
-                </div>
-                <h3 data-aos="fade-up" class="fw-bold mb-2">24 Days</h3>
-                <p class="mb-0 text-success small fw-medium"><i class="bi bi-arrow-down-right me-1"></i> -3 days from last month</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Content Area: Chart and Table -->
-        <div class="row g-4">
-          <!-- Main Chart Placeholder -->
-          <div class="col-lg-8">
-            <div class="card card-dashboard h-100">
-              <div class="card-header bg-transparent border-0 pt-4 pb-0 px-4 d-flex justify-content-between align-items-center">
-                <h5 class="fw-bold mb-0">Revenue Trend</h5>
-                <div class="dropdown">
-                  <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Monthly
-                  </button>
-                  <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item" href="#">Weekly</a></li>
-                    <li><a class="dropdown-item" href="#">Monthly</a></li>
-                    <li><a class="dropdown-item" href="#">Yearly</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card-body p-4 text-center d-flex flex-column justify-content-center align-items-center" style="min-height: 350px;">
-                <!-- Placeholder for Chart -->
-                <i class="bi bi-bar-chart text-muted opacity-25" style="font-size: 8rem;"></i>
-                <p class="text-muted mt-3">Chart visualizing revenue vs claims submitted will load here.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pending Messages/Alerts -->
-          <div class="col-lg-4">
-            <div class="card card-dashboard h-100">
-              <div class="card-header bg-transparent border-0 pt-4 pb-2 px-4">
-                <h5 class="fw-bold mb-0">Recent Messages <span class="badge bg-danger rounded-pill ms-2">3</span></h5>
-              </div>
-              <div class="card-body p-0">
-                <div class="list-group list-group-flush border-0">
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-4 py-3 border-bottom-0">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h6 class="mb-1 fw-bold w-100 text-truncate">Coding Audit Requires Review</h6>
-                      <small class="text-primary-custom ms-2 text-nowrap">2m ago</small>
-                    </div>
-                    <p class="mb-1 text-muted small text-truncate">Please review the 5 CPT codes adjusted by our team...</p>
-                  </a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-4 py-3 border-bottom-0">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h6 class="mb-1 fw-bold w-100 text-truncate">Claim Denial - Need documentation</h6>
-                      <small class="text-muted ms-2 text-nowrap">1h ago</small>
-                    </div>
-                    <p class="mb-1 text-muted small text-truncate">Aetna denied claim #49202, needs patient history...</p>
-                  </a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-4 py-3">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h6 class="mb-1 fw-bold w-100 text-truncate">Welcome to MedPortal</h6>
-                      <small class="text-muted ms-2 text-nowrap">1d ago</small>
-                    </div>
-                    <p class="mb-1 text-muted small text-truncate">Here is a quick guide on how to upload your superbills...</p>
-                  </a>
-                </div>
-              </div>
-              <div class="card-footer bg-transparent border-0 pb-4 pt-0 px-4 text-center">
-                <a href="#" class="btn btn-outline-primary w-100 fw-medium">View All Messages</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Recent Orders (Claims) Table -->
-        <div class="card card-dashboard mt-4 mb-4">
-          <div class="card-header bg-transparent border-0 pt-4 pb-3 px-4 d-flex justify-content-between align-items-center">
-            <h5 class="fw-bold mb-0">Recent Claims (Orders)</h5>
-            <a href="#" class="btn btn-sm btn-primary-custom">View All</a>
-          </div>
-          <div class="card-body p-0">
+        <!-- Claims Table -->
+        <div class="card card-dashboard border-0 shadow-sm rounded-4 mb-4">
             <div class="table-responsive">
               <table class="table table-hover align-middle mb-0">
                 <thead class="bg-tertiary-custom text-muted small">
                   <tr>
                     <th scope="col" class="ps-4 fw-medium border-bottom-0 py-3">Claim ID</th>
-                    <th scope="col" class="fw-medium border-bottom-0 py-3">Patient Name</th>
-                    <th scope="col" class="fw-medium border-bottom-0 py-3">Date of Service</th>
+                    <th scope="col" class="fw-medium border-bottom-0 py-3">Patient</th>
+                    <th scope="col" class="fw-medium border-bottom-0 py-3">Provider</th>
+                    <th scope="col" class="fw-medium border-bottom-0 py-3">Service Date</th>
                     <th scope="col" class="fw-medium border-bottom-0 py-3">Amount</th>
                     <th scope="col" class="fw-medium border-bottom-0 py-3">Status</th>
                     <th scope="col" class="pe-4 fw-medium text-end border-bottom-0 py-3">Action</th>
@@ -336,47 +222,89 @@
                 <tbody>
                   <tr>
                     <td class="ps-4"><span class="fw-bold text-primary-custom">#CLM-49209</span></td>
-                    <td>Sarah Jenkins</td>
+                    <td><p class="mb-0 fw-medium">Sarah Jenkins</p><small class="text-muted">DOB: 05/12/1988</small></td>
+                    <td>Dr. Robert Miller</td>
                     <td class="text-muted small">Oct 24, 2026</td>
-                    <td class="fw-medium">$450.00</td>
+                    <td class="fw-bold">$450.00</td>
                     <td><span class="badge bg-warning bg-opacity-10 text-warning px-3 py-2 rounded-pill">Pending</span></td>
                     <td class="pe-4 text-end">
-                      <button class="btn btn-sm btn-light btn-icon rounded-circle"><i class="bi bi-three-dots-vertical"></i></button>
+                      <div class="btn-group">
+                        <button class="btn btn-sm btn-light border" title="View Detail"><i class="bi bi-eye"></i></button>
+                        <button class="btn btn-sm btn-light border" title="Edit"><i class="bi bi-pencil"></i></button>
+                      </div>
                     </td>
                   </tr>
                   <tr>
                     <td class="ps-4"><span class="fw-bold text-primary-custom">#CLM-49208</span></td>
-                    <td>Michael Chang</td>
+                    <td><p class="mb-0 fw-medium">Michael Chang</p><small class="text-muted">DOB: 11/20/1975</small></td>
+                    <td>Dr. Smith</td>
                     <td class="text-muted small">Oct 23, 2026</td>
-                    <td class="fw-medium">$1,250.00</td>
+                    <td class="fw-bold">$1,250.00</td>
                     <td><span class="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill">Paid</span></td>
                     <td class="pe-4 text-end">
-                      <button class="btn btn-sm btn-light btn-icon rounded-circle"><i class="bi bi-three-dots-vertical"></i></button>
+                      <div class="btn-group">
+                        <button class="btn btn-sm btn-light border"><i class="bi bi-eye"></i></button>
+                        <button class="btn btn-sm btn-light border"><i class="bi bi-pencil"></i></button>
+                      </div>
                     </td>
                   </tr>
                   <tr>
                     <td class="ps-4"><span class="fw-bold text-primary-custom">#CLM-49207</span></td>
-                    <td>Jessica Alba</td>
+                    <td><p class="mb-0 fw-medium">Jessica Alba</p><small class="text-muted">DOB: 02/14/1992</small></td>
+                    <td>Dr. Emily White</td>
                     <td class="text-muted small">Oct 22, 2026</td>
-                    <td class="fw-medium">$320.00</td>
+                    <td class="fw-bold">$320.00</td>
                     <td><span class="badge bg-danger bg-opacity-10 text-danger px-3 py-2 rounded-pill">Denied</span></td>
                     <td class="pe-4 text-end">
-                      <button class="btn btn-sm btn-light btn-icon rounded-circle"><i class="bi bi-three-dots-vertical"></i></button>
+                      <div class="btn-group">
+                        <button class="btn btn-sm btn-light border"><i class="bi bi-eye"></i></button>
+                        <button class="btn btn-sm btn-light border"><i class="bi bi-pencil"></i></button>
+                      </div>
                     </td>
                   </tr>
                   <tr>
                     <td class="ps-4"><span class="fw-bold text-primary-custom">#CLM-49206</span></td>
-                    <td>David Miller</td>
+                    <td><p class="mb-0 fw-medium">David Miller</p><small class="text-muted">DOB: 08/30/1962</small></td>
+                    <td>Dr. Robert Miller</td>
                     <td class="text-muted small">Oct 21, 2026</td>
-                    <td class="fw-medium">$890.00</td>
+                    <td class="fw-bold">$890.00</td>
                     <td><span class="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill">Paid</span></td>
                     <td class="pe-4 text-end">
-                      <button class="btn btn-sm btn-light btn-icon rounded-circle"><i class="bi bi-three-dots-vertical"></i></button>
+                      <div class="btn-group">
+                        <button class="btn btn-sm btn-light border"><i class="bi bi-eye"></i></button>
+                        <button class="btn btn-sm btn-light border"><i class="bi bi-pencil"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="ps-4"><span class="fw-bold text-primary-custom">#CLM-49205</span></td>
+                    <td><p class="mb-0 fw-medium">Linda Thompson</p><small class="text-muted">DOB: 12/01/1980</small></td>
+                    <td>Dr. Smith</td>
+                    <td class="text-muted small">Oct 20, 2026</td>
+                    <td class="fw-bold">$560.00</td>
+                    <td><span class="badge bg-warning bg-opacity-10 text-warning px-3 py-2 rounded-pill">Pending</span></td>
+                    <td class="pe-4 text-end">
+                      <div class="btn-group">
+                        <button class="btn btn-sm btn-light border"><i class="bi bi-eye"></i></button>
+                        <button class="btn btn-sm btn-light border"><i class="bi bi-pencil"></i></button>
+                      </div>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
+          </div>
+          <div class="card-footer bg-transparent border-top-0 py-3 px-4 d-flex justify-content-between align-items-center">
+            <span class="small text-muted">Showing 1 to 5 of 124 claims</span>
+            <nav aria-label="Page navigation">
+              <ul class="pagination pagination-sm mb-0">
+                <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
 
