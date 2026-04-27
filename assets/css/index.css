@@ -714,43 +714,90 @@ i:hover {
   background-color: var(--card-bg);
 }
 
-/* ── Fixed RTL Toggle Button (Top-Right Corner) ── */
+/* ── Shared RTL button style — proper labeled pill button ── */
+.rtl-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1rem;
+  height: auto;
+  width: auto;
+  border-radius: 50rem;            /* pill shape */
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none !important;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.rtl-btn:hover {
+  background: var(--primary-color);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+.rtl-btn.active {
+  background: var(--primary-color);
+  color: #ffffff;
+}
+[data-bs-theme="dark"] .rtl-btn {
+  background: transparent;
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+[data-bs-theme="dark"] .rtl-btn:hover,
+[data-bs-theme="dark"] .rtl-btn.active {
+  background: var(--secondary-color);
+  color: #ffffff;
+  border-color: var(--secondary-color);
+}
+
+/* ── Fixed RTL Toggle Button (Top-Right Corner) — proper pill button ── */
 #rtl-toggle-fixed {
   position: fixed;
   top: 80px;
   right: 16px;
   z-index: 2000;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #ffffff;
+  padding: 0.4rem 1rem;
+  height: auto;
+  width: auto;
+  border-radius: 50rem;            /* pill shape */
+  background: transparent;
   border: 2px solid var(--primary-color);
   color: var(--primary-color);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  display: flex;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 16px rgba(13, 110, 253, 0.25);
-  transition: all 0.3s ease;
-  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+  transition: all 0.25s ease;
+  white-space: nowrap;
 }
 #rtl-toggle-fixed:hover {
   background: var(--primary-color);
   color: #ffffff;
-  transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(13, 110, 253, 0.35);
 }
 #rtl-toggle-fixed.active {
   background: var(--primary-color);
   color: #ffffff;
 }
 [data-bs-theme="dark"] #rtl-toggle-fixed {
-  background: var(--card-bg);
+  background: transparent;
   border-color: var(--secondary-color);
   color: var(--secondary-color);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 [data-bs-theme="dark"] #rtl-toggle-fixed:hover,
 [data-bs-theme="dark"] #rtl-toggle-fixed.active {
