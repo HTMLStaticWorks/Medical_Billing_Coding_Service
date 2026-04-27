@@ -58,6 +58,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // ── Collapse navbar on desktop resize (prevents ghost brand + X bug) ──
+  const navbarCollapse = document.getElementById('navbarCollapse');
+  if (navbarCollapse) {
+    const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse, { toggle: false });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 992) {
+        // Force-hide the collapse and remove Bootstrap's lingering classes
+        navbarCollapse.classList.remove('show');
+        navbarCollapse.style.height = '';
+        bsCollapse.hide();
+      }
+    });
+  }
+
   // Back to Top Button
   const backToTopBtn = document.getElementById('back-to-top');
   
@@ -138,4 +152,33 @@ document.addEventListener('DOMContentLoaded', () => {
       navbarToggler.setAttribute('aria-expanded', 'false');
     }
   }
+
+  // ── Fixed RTL Toggle Button ──
+  const rtlBtn = document.getElementById('rtl-toggle-fixed');
+
+  function setRTL(isRTL) {
+    if (isRTL) {
+      htmlElement.setAttribute('dir', 'rtl');
+      localStorage.setItem('medcode-rtl', 'true');
+    } else {
+      htmlElement.setAttribute('dir', 'ltr');
+      localStorage.setItem('medcode-rtl', 'false');
+    }
+    if (rtlBtn) {
+      rtlBtn.textContent = isRTL ? 'LTR' : 'RTL';
+      rtlBtn.classList.toggle('active', isRTL);
+    }
+  }
+
+  // Restore saved RTL preference
+  const savedRTL = localStorage.getItem('medcode-rtl') === 'true';
+  setRTL(savedRTL);
+
+  if (rtlBtn) {
+    rtlBtn.addEventListener('click', () => {
+      const isRTL = htmlElement.getAttribute('dir') === 'rtl';
+      setRTL(!isRTL);
+    });
+  }
 });
+
