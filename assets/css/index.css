@@ -402,6 +402,14 @@ body {
   transition: all 0.3s ease;
 }
 
+/* Apple icon — theme-aware contrast fix */
+.bi-apple {
+  color: #1d1d1f !important; /* Apple near-black — visible on white/light button */
+}
+[data-bs-theme="dark"] .bi-apple {
+  color: #ffffff !important; /* White — visible on dark button */
+}
+
 /* Social Login Adjustments */
 @media (max-width: 576px) {
   .social-login-btn {

@@ -31,18 +31,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // RTL/LTR Toggle logic
+  // RTL/LTR Toggle logic (navbar inline button)
   const dirToggle = document.getElementById('dir-toggle');
   if (dirToggle) {
-    const savedDir = localStorage.getItem('dir') || 'ltr';
+    // Restore saved direction
+    const savedDir = localStorage.getItem('medcode-rtl') === 'true' ? 'rtl' : 'ltr';
     htmlElement.setAttribute('dir', savedDir);
+    dirToggle.textContent = savedDir === 'rtl' ? 'LTR' : 'RTL';
 
     dirToggle.addEventListener('click', (e) => {
       e.preventDefault();
-      const currentDir = htmlElement.getAttribute('dir');
-      const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
+      const isRTL = htmlElement.getAttribute('dir') === 'rtl';
+      const newDir = isRTL ? 'ltr' : 'rtl';
       htmlElement.setAttribute('dir', newDir);
-      localStorage.setItem('dir', newDir);
+      localStorage.setItem('medcode-rtl', String(!isRTL));
+      dirToggle.textContent = newDir === 'rtl' ? 'LTR' : 'RTL';
+      // Also sync the fixed button if present
+      const fixedBtn = document.getElementById('rtl-toggle-fixed');
+      if (fixedBtn) {
+        fixedBtn.textContent = newDir === 'rtl' ? 'LTR' : 'RTL';
+        fixedBtn.classList.toggle('active', !isRTL);
+      }
     });
   }
 
