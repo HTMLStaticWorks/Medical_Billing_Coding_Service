@@ -82,6 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
         navbarCollapseEl.classList.remove('show');
         navbarCollapseEl.style.height = '';
         bsCollapse.hide();
+        document.body.classList.remove('menu-open');
+        const backdrop = document.querySelector('.menu-backdrop');
+        if (backdrop) backdrop.classList.remove('show');
       }
     });
   }

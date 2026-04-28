@@ -581,6 +581,11 @@ i:hover {
 .card:hover .bg-info.bg-opacity-10 i, .d-flex:hover .bg-info.bg-opacity-10 i { color: #0dcaf0 !important; transform: scale(1.15); }
 .card:hover .bg-success.bg-opacity-10 i, .d-flex:hover .bg-success.bg-opacity-10 i { color: #198754 !important; transform: scale(1.15); }
 
+/* Hide mobile menu header on desktop by default */
+.menu-header {
+  display: none;
+}
+
 /* Mobile Overlay Menu Refinement */
 @media (max-width: 991px) {
   .navbar-collapse {
