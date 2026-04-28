@@ -698,9 +698,10 @@ i:hover {
 }
 
 /* Fix dashboard toggler and outline buttons visibility in dark mode */
-[data-bs-theme="dark"] .btn-outline-secondary {
-  color: var(--text-dark) !important;
-  border-color: var(--border-color) !important;
+[data-bs-theme="dark"] .btn-outline-secondary,
+[data-bs-theme="dark"] .btn-outline-secondary i {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
 }
 [data-bs-theme="dark"] .btn-outline-secondary:hover {
   background-color: var(--primary-color) !important;
