@@ -697,6 +697,17 @@ i:hover {
   color: #6c757d;
 }
 
+/* Fix dashboard toggler and outline buttons visibility in dark mode */
+[data-bs-theme="dark"] .btn-outline-secondary {
+  color: var(--text-dark) !important;
+  border-color: var(--border-color) !important;
+}
+[data-bs-theme="dark"] .btn-outline-secondary:hover {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #ffffff !important;
+}
+
 /* Accordion theme fix */
 .accordion-button {
   background-color: var(--card-bg);
