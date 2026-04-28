@@ -40,6 +40,10 @@
       </div>
 
       <div class="d-flex align-items-center gap-2 gap-md-3 ms-auto flex-nowrap">
+        <!-- RTL Toggle -->
+        <button id="rtl-toggle" class="btn btn-link nav-link px-0" aria-label="Toggle RTL">
+          <i class="bi bi-arrow-left-right fs-6 fs-md-5"></i>
+        </button>
         <!-- Theme Toggle -->
         <button id="theme-toggle" class="btn btn-link nav-link px-0" aria-label="Toggle theme">
           <i id="theme-icon" class="bi bi-moon-fill fs-6 fs-md-5"></i>
@@ -105,6 +109,11 @@
             <li class="nav-item">
               <a href="dashboard-messages.html" class="sidebar-link">
                 <i class="bi bi-chat-dots"></i> Messages
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" id="sidebar-rtl-toggle" class="sidebar-link">
+                <i class="bi bi-arrow-left-right"></i> Toggle RTL
               </a>
             </li>
           </ul>

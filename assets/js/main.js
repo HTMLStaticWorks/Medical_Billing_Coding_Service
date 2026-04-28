@@ -30,6 +30,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // RTL Toggle
+  const rtlToggles = document.querySelectorAll('#rtl-toggle, #sidebar-rtl-toggle');
+  
+  // Check saved RTL preference
+  const savedRtl = localStorage.getItem('rtl') === 'true';
+  if (savedRtl) {
+    htmlElement.setAttribute('dir', 'rtl');
+    rtlToggles.forEach(toggle => toggle.classList.add('active'));
+  } else {
+    htmlElement.setAttribute('dir', 'ltr');
+    rtlToggles.forEach(toggle => toggle.classList.remove('active'));
+  }
+
+  rtlToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isRtl = htmlElement.getAttribute('dir') === 'rtl';
+      const newRtl = !isRtl;
+      
+      if (newRtl) {
+        htmlElement.setAttribute('dir', 'rtl');
+        localStorage.setItem('rtl', 'true');
+        rtlToggles.forEach(t => t.classList.add('active'));
+      } else {
+        htmlElement.setAttribute('dir', 'ltr');
+        localStorage.setItem('rtl', 'false');
+        rtlToggles.forEach(t => t.classList.remove('active'));
+      }
+    });
+  });
+
   function updateThemeIcon(theme) {
     if (themeIcon) {
       if (theme === 'dark') {
