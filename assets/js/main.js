@@ -85,6 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('menu-open');
         const backdrop = document.querySelector('.menu-backdrop');
         if (backdrop) backdrop.classList.remove('show');
+        
+        // Force remove mobile menu header on desktop resize
+        const mobileHeader = navbarCollapseEl.querySelector('.menu-header');
+        if (mobileHeader) mobileHeader.remove();
       }
     });
   }

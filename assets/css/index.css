@@ -583,7 +583,7 @@ i:hover {
 
 /* Hide mobile menu header on desktop by default */
 .menu-header {
-  display: none;
+  display: none !important;
 }
 
 /* Mobile Overlay Menu Refinement */
@@ -611,7 +611,7 @@ i:hover {
 
   /* Menu Header */
   .menu-header {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 2rem;
